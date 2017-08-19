@@ -50,6 +50,14 @@
      group: "ubuntu"
      mode: 0755
 
+  - name: install sql trunc script
+    template:
+     src: "templates/looptrunc.sh"
+     dest: "/home/ubuntu/looptrunc.sh"
+     owner: "ubuntu"
+     group: "ubuntu"
+     mode: 0755
+
 - hosts: dblb
   become: true
   gather_facts: true

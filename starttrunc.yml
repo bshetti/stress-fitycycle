@@ -6,7 +6,7 @@
   tasks:
 
   - name: start trunc
-    shell: nohup /home/ubuntu/trunctable.sh &
+    shell: nohup /home/ubuntu/looptrunc.sh &
     become: true
  
   
