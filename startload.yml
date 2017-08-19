@@ -1,0 +1,31 @@
+---
+- hosts: db
+  become: true
+  gather_facts: true
+
+  tasks:
+
+  - name: start db load
+    command: /home/ubuntu/dbload.sh 
+    become: true
+ 
+- hosts: web
+  become: true
+  gather_facts: true
+
+  tasks:
+
+  - name: start web load
+    command: /home/ubuntu/webload.sh 
+    become: true
+
+- hosts: app
+  become: true
+  gather_facts: true
+
+  tasks:
+
+  - name: start appload
+    command: /home/ubuntu/appload.sh 
+    become: true
+  

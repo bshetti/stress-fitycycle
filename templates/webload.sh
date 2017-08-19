@@ -1,2 +1,3 @@
 #!/bin/bash
-stress-ng -c 1 -l 15 
+nohup stress-ng -c 1 -l 15 >/home/ubuntu/loadoutput &
+
