@@ -1,0 +1,45 @@
+---
+- hosts: web 
+  become: true
+  gather_facts: true
+
+  tasks:
+
+  - name: install webload file web
+    template:
+     src: "templates/webload.sh"
+     dest: "/home/ubuntu/webload.sh"
+     owner: ubuntu
+     group: "ubuntu"
+     mode: 0755
+ 
+- hosts: app
+  become: true
+  gather_facts: true
+
+  tasks:
+
+  - name: install webload file app
+    template:
+     src: "templates/appload.sh"
+     dest: "/home/ubuntu/appload.sh"
+     owner: ubuntu
+     group: "ubuntu"
+     mode: 0755
+ 
+
+- hosts: db
+  become: true
+  gather_facts: true
+
+  tasks:
+
+  - name: install webload file db
+    template:
+     src: "templates/dbload.sh"
+     dest: "/home/ubuntu/dbload.sh"
+     owner: ubuntu
+     group: "ubuntu"
+     mode: 0755
+ 
+  
