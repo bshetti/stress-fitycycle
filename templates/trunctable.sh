@@ -8,7 +8,7 @@ do
         alter table polls_prospect AUTO_INCREMENT = 1;
         EOF
 
-sleep 3600
+sleep 300
 
 done
 

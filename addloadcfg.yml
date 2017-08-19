@@ -5,7 +5,7 @@
 
   tasks:
 
-  - name: install webload file web
+  - name: install load file web
     template:
      src: "templates/webload.sh"
      dest: "/home/ubuntu/webload.sh"
@@ -19,7 +19,7 @@
 
   tasks:
 
-  - name: install webload file app
+  - name: install load file app
     template:
      src: "templates/appload.sh"
      dest: "/home/ubuntu/appload.sh"
@@ -34,7 +34,7 @@
 
   tasks:
 
-  - name: install webload file db
+  - name: install load file db
     template:
      src: "templates/dbload.sh"
      dest: "/home/ubuntu/dbload.sh"
@@ -49,4 +49,19 @@
      owner: "ubuntu"
      group: "ubuntu"
      mode: 0755
+
+- hosts: dblb
+  become: true
+  gather_facts: true
+
+  tasks:
+
+  - name: install load file db
+    template:
+     src: "templates/dbload.sh"
+     dest: "/home/ubuntu/dbload.sh"
+     owner: "ubuntu"
+     group: "ubuntu"
+     mode: 0755
+
   
