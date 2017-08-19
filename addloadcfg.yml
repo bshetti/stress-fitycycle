@@ -9,7 +9,7 @@
     template:
      src: "templates/webload.sh"
      dest: "/home/ubuntu/webload.sh"
-     owner: ubuntu
+     owner: "ubuntu"
      group: "ubuntu"
      mode: 0755
  
@@ -23,7 +23,7 @@
     template:
      src: "templates/appload.sh"
      dest: "/home/ubuntu/appload.sh"
-     owner: ubuntu
+     owner: "ubuntu"
      group: "ubuntu"
      mode: 0755
  
@@ -38,8 +38,15 @@
     template:
      src: "templates/dbload.sh"
      dest: "/home/ubuntu/dbload.sh"
-     owner: ubuntu
+     owner: "ubuntu"
      group: "ubuntu"
      mode: 0755
  
+  - name: install sql trunc script
+    template:
+     src: "templates/trunctable.sh"
+     dest: "/home/ubuntu/trunctable.sh"
+     owner: "ubuntu"
+     group: "ubuntu"
+     mode: 0755
   

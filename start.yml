@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: true
+  gather_facts: true
+
+  tasks:
+
+  - name: install stress into all hosts
+    apt:
+     name: stress-ng
+     update_cache: yes
+ 
+  
