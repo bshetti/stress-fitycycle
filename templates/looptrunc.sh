@@ -2,5 +2,5 @@
 while true
 do
  /home/ubuntu/trunctable.sh
- sleep 300
+ sleep 43200
 done
